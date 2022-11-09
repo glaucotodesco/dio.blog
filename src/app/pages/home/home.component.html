@@ -1,15 +1,11 @@
-<header>
-    <app-menu-bar></app-menu-bar>
-</header>
-
 <app-menu-title></app-menu-title>
 <div class="container__articles">
-    <div class="articles__main">
-        <app-big-card></app-big-card>
+    <div *ngIf="mainArticle" class="articles__main">
+        <app-big-card [id]="mainArticle.id"></app-big-card>
     </div>
     <div class="articles__others">
-        <app-small-card></app-small-card>
-        <app-small-card></app-small-card>
-        <app-small-card></app-small-card>   
+        <div *ngFor="let article of otherArticles" >
+            <app-small-card [id]="article.id"></app-small-card>
+        </div>
     </div>
 </div>

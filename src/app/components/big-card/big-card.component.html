@@ -1,20 +1,15 @@
 <div class="container__big-card">
     <div class="big-card__photo">
-        <img src="https://cdn.buttercms.com/K17XxBZR2cPWLTOX707A" alt="">
+        <img [src]="article?.url_photo" alt="">
     </div>
     <div class="big-card__title">
-        <a href="#">
-            <h1>Lorem ipsum dolor sit amet consectetut</h1>
+        <a routerLink="content/{{id}}">
+            <h1>{{article?.title}}</h1>
         </a>
     </div>
     <div class="big-card__description">
-
-        <p> <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore aliquam voluptatibus
-                laudantium illum,
-                cupiditate impedit fuga aperiam dolores praesentium saepe, recusandae maiores culpa odio nesciunt error
-                quasi non, harum incidunt.
-            </a>
-        </p>
-
+        <p> 
+            <a routerLink="content/{{id}}">{{article?.description}} </a>
+       </p>
     </div>
 </div>

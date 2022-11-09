@@ -1,11 +1,11 @@
-<div class="container__small-card">
+<div *ngIf="article" class="container__small-card">
     <div class="container__small-card-content">
         <div class="small-card__photo">
-            <img src="https://cdn.buttercms.com/K17XxBZR2cPWLTOX707A" alt="">
+            <img [src]="article.url_photo" alt="">
         </div>
         <div class="small-card__title">
-            <a href="#">
-                <h1>Lorem ipsum dolor sit amet consectetut</h1>
+            <a routerLink="content/{{article.id}}">
+                <h1>{{article.title}}</h1>
             </a>
         </div>
     </div>
